@@ -3,8 +3,8 @@ var canvas = document.getElementById('myCanvas');
 var ctx = canvas.getContext('2d');
 var w =canvas.width;
 var h = canvas.height;
-var zx=0;
-var zy=0;
+var cx=0.2685;
+var cy=0;
 
 class Complex {
 	constructor(re,im){
@@ -36,7 +36,8 @@ function cadd(c1,c2){
 
 var center = new Complex(0,0);
 var zoom = 0.5;
-var maxiter=100;
+var maxiter=200;
+var colors =chroma.scale(['blue','red','green']).colors(maxiter+1, 'rgb');
 
 document.addEventListener('keydown', function(event) {
 	switch(event.key){
@@ -58,48 +59,60 @@ document.addEventListener('keydown', function(event) {
 		case 'e':
 			zoom=zoom*1.1;
 			break;
+		case 'ArrowUp':
+			cy-=.01/zoom;
+			break;
+		case 'ArrowDown':
+			cy+=.01/zoom;
+			break;
+		case 'ArrowLeft':
+			cx-=.01/zoom;
+			break;
+		case 'ArrowRight':
+			cx+=.01/zoom;
+			break;
       }
+	console.log(`c=${cx}+${cy}i`);
 })
 
 function cross(h,w){
-	//scale pixel coords to complex plane around center
-	let a = [...Array(h).keys()];
-	let b = [...Array(w).keys()];
-	let f = (a, b) => [].concat(...a.map(a => b.map(b => [].concat(a, b))));
-	let cartesian = (a, b, ...c) => b ? cartesian(f(a, b), ...c) : a;
-	return cartesian(a,b)
+  //scale pixel coords to complex plane around center
+  let a = [...Array(h).keys()];
+  let b = [...Array(w).keys()];
+  let f = (a, b) => [].concat(...a.map(a => b.map(b => [].concat(a, b))));
+  let cartesian = (a, b, ...c) => b ? cartesian(f(a, b), ...c) : a;
+  return cartesian(a,b)
 }
 
 function checkBounded(x,y){
-	z=new Complex(zx,zy);
-	c=new Complex(x,y);
-	i=0;
-	rgba=new Array(4);
-	while(i<maxiter && z.size<2){
-		z.square();
-		z.add(c);
-		i++;
-	}
-	if (i===maxiter){
-		rgba[0]=255;
-	} else {rgba[1]=4*i};
-	rgba[3]=255;
-	return rgba;
+  c=new Complex(cx,cy);
+  z=new Complex(x,y);
+  i=0;
+  
+  while(i<maxiter && z.size<2){
+	z.square();
+	z.add(c);
+  	i++;
+  }
+  rgba=[...colors[i]];
+  rgba.push(255);
+  return rgba;
 }
 
 let cartesian=cross(w,h);
 
 function draw(){
 	pixies=cartesian.map(p=>[((p[0]/h)*2-1)/zoom+center.im, ((p[1]/w)*2-1)/zoom+center.re]);
-	rgb_arr = pixies.map(p=>checkBounded(p[1],p[0]))
-	byte_array=new Uint8ClampedArray(w*h*4);
-	for (i = 0;i<rgb_arr.length;i++){
-		for (j=0;j<4;j++){
-			byte_array[4*i+j]=rgb_arr[i][j];
-		}
-	}
+  rgb_arr = pixies.map(p=>checkBounded(p[1],p[0]))
+  byte_array=new Uint8ClampedArray(w*h*4);
+  for (i = 0;i<rgb_arr.length;i++){
+	  for (j=0;j<4;j++){
+		  byte_array[4*i+j]=rgb_arr[i][j];
+	  }
+  }
 
-	imdat= new ImageData(byte_array, w, h);
-	ctx.putImageData(imdat,0,0);
+  imdat= new ImageData(byte_array, w, h);
+  ctx.putImageData(imdat,0,0);
+  ctx.fillRect( (((cx-center.re)*zoom)+1)*(h/2), (((cy-center.im)*zoom)+1)*(h/2),5,5);
 }
 setInterval(draw,6);
