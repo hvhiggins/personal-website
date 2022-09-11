@@ -154,7 +154,7 @@ document.addEventListener('keydown', function(event) {
 var controlstext = [
     "Controls:",
     "Q,A: k, W,S: k2, E,D: p, R,F: h",
-    "pause/play: &ltspacebar&gt",
+    "pause/play: <spacebar>",
     "reset targets: t",
     "Thanks to David Oliphant and Sort of School"]
     
