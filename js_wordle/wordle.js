@@ -53,7 +53,6 @@ function guessWord(e) {
         guessBox = document.getElementById("guessBox")
         word = guessBox.value
         guessBox.value = ""
-        print(word)
-        checkWord(word, hiddenWord);        
+        checkWord(word.toLowerCase(), hiddenWord);        
     }
 }
