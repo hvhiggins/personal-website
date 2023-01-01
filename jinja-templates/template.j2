@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Holden Higgins
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>    
+
+
+<body>
+    <ul id="navigation">
+        {% for item in navigation %}
+            <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+        {% endfor %}
+        </ul>
+    <div id="content">
+        <h1>{{ page_heading }}</h1>
+        {{ page_content }}
+    </div>
+</body>
+</html>
