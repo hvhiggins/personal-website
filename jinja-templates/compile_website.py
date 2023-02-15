@@ -36,11 +36,10 @@ def render_template(filename):
     return env.get_template(filename).render(
         navigation = nav,
         page_heading = 'About',
-        page_content = 'My name is Holden Higgins, I like writing code and \
-                        reading everything from Twilight to Epictetus. Currently \
-                        I\'m pursuing a Computational and Applied Math degree at \
-                        The University of Chicago. This website is a home for \
-                        things I make.'
+        page_content = 'My name is Holden Higgins, I like writing code and '
+                        'reading everything from Stephanie Meyer to Suetonius. Currently '
+                        'I\'m pursuing a Math degree at the University of Chicago. '
+                        'This website is a home for things I make.'
     )
 
 if __name__ == "__main__":
