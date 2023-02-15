@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -8,20 +8,30 @@
   <style>
     body {
       padding: 0;
-      margin: 0;
+      margin: auto;
       overflow: hidden;
+      background-color: #111111;
+      color: white;
+    }
+    canvas {
+      margin: auto;
+      width: 100%;
+      border:1px solid #000000;
+    }
+    .myVisualization {
+      margin: auto;
+      width: 30%;
     }
   </style>
 </head>
 
 <body>
- 	  <canvas id="myCanvas" width="800" height="800" style="border:1px solid #000000;">
-	  </canvas>
-  <script src="mandelbrot.js"></script>
-
-  <main>
-    Use w/a/s/d to move view, q/e to zoom.
-  </main>
+ 	<div class = "myVisualization">
+    <canvas id="myCanvas" width="800" height="800"></canvas>
+    <script src="mandelbrot.js"></script>
+    <p>Use w/a/s/d to move view, q/e to zoom.</p>
+    
+  </div>
 </body>
 
 </html>

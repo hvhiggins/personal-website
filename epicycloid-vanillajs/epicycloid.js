@@ -76,14 +76,15 @@ getHex = function() {
 }
 
 function updateRandOne(v, vspd, mult) {
-  return v+(Math.random()*2*vspd-vspd)*mult;
+  sign = math.random() > .5 ? -1 : 1
+  return v + ((Math.random()/2)+1) * sign * vspd * mult;
 }
 function updateRandAll() {
   if (!cnt){
     cnt=target_interval;
     history.push({...targvars});
     for (v in vars){
-	  targvars[v]=updateRandOne(vars[v], varspds[v], 100);
+      targvars[v]=updateRandOne(vars[v], varspds[v], 100);
     }
   }
   for (v in vars){
@@ -206,4 +207,4 @@ function draw() {
     }
     ctx.stroke()
 }
-setInterval(draw,30);
+setInterval(draw,50);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -8,22 +8,37 @@
   <style>
     body {
       padding: 0;
-      margin: 0;
+      margin: auto;
       overflow: hidden;
+      background-color: #111111;
+      color: white;
+    }
+    canvas {
+      margin: auto;
+      width: 100%;
+      border:1px solid #000000;
+    }
+    .myVisualization {
+      margin: auto;
+      width: 30%;
     }
   </style>
+
+  <script src="chroma.min.js"></script>
+
 </head>
 
 <body>
-  <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;">
-  </canvas>
 
-  <script src="chroma.min.js"></script>
-  <script src="julia.js"></script>
+  <div class = "myVisualization">
+  
+    <canvas id="myCanvas" width="800" height="800"></canvas>
 
-  <main>
-    Use w/a/s/d to move view, q/e to zoom, and arrow keys to move the starting point (black dot).<br>
-  </main>
+    <script src="julia.js"></script>
+    <p>Use w/a/s/d to move view, q/e to zoom, and arrow keys to move the starting point (black dot).</p>
+  
+  </div>
+
 </body>
 
 </html>

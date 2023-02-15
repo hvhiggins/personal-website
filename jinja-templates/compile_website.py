@@ -46,5 +46,5 @@ def render_template(filename):
 if __name__ == "__main__":
     for f in templates:
         rendered_string = render_template(f)
-        with open('../test_output.html', 'w') as outfile:
+        with open('../index.html', 'w') as outfile:
             outfile.write(rendered_string)
