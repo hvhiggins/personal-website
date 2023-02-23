@@ -11,11 +11,11 @@
 <body>
 
     <nav class="menu">
-        <ul class="menu-list">
+
             {% for item in navigation %}
-                <li class="menu-item"><a href="{{ item.href }}">{{ item.caption }}</a></li>
+            <a class="menu-item" href="{{ item.href }}">{{ item.caption }}</a>
             {% endfor %}
-        </ul>
+
         <div class="social-bar">
             <a  target="_blank" href="http://github.com/hvhiggins/"><img style="height: 60px; padding-left: 5px; margin-top:30px; display:inline-block; float: left" src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg"></a>
             <a  target="_blank" href="mailto:hvictorhiggins@gmail.com"><img style="height: 60px; display:inline-block; float: left ;margin-top:30px;" src="https://logodix.com/logo/611048.png"></a>
