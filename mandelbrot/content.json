@@ -1,4 +1,5 @@
 {
     "page_title": "Mandelbrot set visualizer",
-    "page_content": "<canvas id='myCanvas' width='800' height='800'></canvas>\n  <script src='mandelbrot.js'></script>\n <p>Use w/a/s/d to move view, q/e to zoom.</p>"
+    "page_script": "mandelbrot.js",
+    "page_content": "<canvas id='myCanvas' width='800' height='800'></canvas>\n <p>Use w/a/s/d to move view, q/e to zoom.</p>"
 }

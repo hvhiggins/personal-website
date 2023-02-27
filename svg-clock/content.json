@@ -1,6 +1,6 @@
 {
     "page_title": "Tick Tock, SVG clock",
     "page_heading": "",
-    "page_script": "https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.2/svg.min.js",
-    "page_content": "<script src='clock.js'></script>"
+    "page_script": "clock.js",
+    "page_content": "<script src='https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.2/svg.min.js'></script>"
 }
