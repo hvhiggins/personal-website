@@ -66,7 +66,7 @@ homepage_content = {
     'page_title': 'Holden Higgins',
     'page_heading': 'About',
     'page_content': 'My name is Holden Higgins, I like writing code and '
-                        'reading everything from Stephanie Meyer to Suetonius. Currently '
+                        'reading everything from Suetonius to Stephanie Meyer. Currently '
                         'I\'m pursuing a Math degree at the University of Chicago. '
                         'This website is a home for things I make.'
 }
