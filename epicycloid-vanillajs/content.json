@@ -1,0 +1,6 @@
+{
+    "page_title": "Epicycloid Animation",
+    "page_heading": "",
+    "page_script": "epicycloid.js",
+    "page_content": "<canvas id='myCanvas' style='border:1px solid #000000; background-color: #000000;'></canvas>"
+}

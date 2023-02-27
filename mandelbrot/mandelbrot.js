@@ -37,6 +37,7 @@ function cadd(c1,c2){
 var center = new Complex(0,0);
 var zoom = 0.5;
 var maxiter=100;
+var changed = true;
 
 document.addEventListener('keydown', function(event) {
 	switch(event.key){
@@ -59,6 +60,7 @@ document.addEventListener('keydown', function(event) {
 			zoom=zoom*1.1;
 			break;
       }
+	  changed = true;
 })
 
 function cross(h,w){
@@ -90,6 +92,9 @@ function checkBounded(x,y){
 let cartesian=cross(w,h);
 
 function draw(){
+	if (!changed){
+		return;
+	}
 	pixies=cartesian.map(p=>[((p[0]/h)*2-1)/zoom+center.im, ((p[1]/w)*2-1)/zoom+center.re]);
 	rgb_arr = pixies.map(p=>checkBounded(p[1],p[0]))
 	byte_array=new Uint8ClampedArray(w*h*4);
@@ -101,5 +106,6 @@ function draw(){
 
 	imdat= new ImageData(byte_array, w, h);
 	ctx.putImageData(imdat,0,0);
+	changed=false;
 }
 setInterval(draw,6);

@@ -1,0 +1,6 @@
+{
+    "page_title": "Julia Set Visualizer",
+    "page_heading": "",
+    "page_script": "chroma.min.js",
+    "page_content": "<canvas id='myCanvas' width='800' height='800'></canvas>\n <script src='julia.js'></script>\n <p>Use w/a/s/d to move view, q/e to zoom, and arrow keys to move the starting point (black dot).</p>"
+}

@@ -1,0 +1,6 @@
+{
+    "page_title": "JS Wordle",
+    "page_heading": "",
+    "page_script": "wordle.js",
+    "page_content": "<link rel='stylesheet' href='style.css'>\n <div id='game'>\n<div id='guesses'></div>\n<input type='text' placeholder='Guess a word' id='guessBox' onkeydown='guessWord(event)'/>  \n<div id='output'></div>\n <div id='refresh'></div>\n</div>"
+}

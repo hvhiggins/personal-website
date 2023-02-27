@@ -1,5 +1,4 @@
-outputElem = document.getElementById("output")
-guesses = document.getElementById("guesses")
+
 var fiveLetterWords;
 var hiddenWord;
 
@@ -13,6 +12,10 @@ fetch('./five_letter_words.json')
     .then((json) => fiveLetterWords=json)
     .then(() => hiddenWord = choseRandom(fiveLetterWords));
 
+window.onload = () => {
+    outputElem = document.getElementById("output")
+    guesses = document.getElementById("guesses")
+}
 
 appendMark = (elem, cls, letter) => {
     m = document.createElement("mark")

@@ -4,16 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        {{ page_title}}
+        Centerline
     </title>
     <link rel="stylesheet" href="/style.css">
-    <script src="{{ page_script }}"></script>
+    <script src=""></script>
 </head>    
 
 <body>
 
-    <nav class="menu">{% for item in navigation %}
-        <a class="menu-item" href="/{{ item.href }}">{{ item.caption }}</a>{% endfor %}
+    <nav class="menu">
+        <a class="menu-item" href="/index.html">About</a>
+        <a class="menu-item" href="/mandelbrot/index.html">Mandelbrot set</a>
+        <a class="menu-item" href="/julia/index.html">Julia sets</a>
+        <a class="menu-item" href="/epicycloid-vanillajs/index.html">Epicycloids</a>
+        <a class="menu-item" href="/svg-clock/index.html">Tick tock, svg clock</a>
+        <a class="menu-item" href="/js_wordle/index.html">Like wordle, but jankier</a>
+        <a class="menu-item" href="/art/Beach.html">Art 1</a>
+        <a class="menu-item" href="/art/Centerline.html">Art 2</a>
+        <a class="menu-item" href="/art/Gold River.html">Art 3</a>
+        <a class="menu-item" href="/art/Penrose tiles.html">Art 4</a>
         <div class="social-bar">
             <a  target="_blank" href="http://github.com/hvhiggins/"><img style="height: 60px; padding-left: 5px; margin-top:30px; display:inline-block; float: left" src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg"></a>
             <a  target="_blank" href="mailto:hvictorhiggins@gmail.com"><img style="height: 60px; display:inline-block; float: left ;margin-top:30px;" src="https://logodix.com/logo/611048.png"></a>
@@ -21,8 +30,8 @@
         </div>
     </nav>
     <div class="content">
-        {% if page_heading %}<h1>{{ page_heading }}</h1>{% endif %}
-        {{ page_content }}
+        <h1>Centerline, spackle on canvas, aided by a fork</h1>
+        <img src='/art/centerline.jpg' alt='centerline' width=100%>
     </div>
 
 

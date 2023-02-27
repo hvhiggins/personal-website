@@ -1,17 +1,13 @@
 body {
-    background-color: rgb(222, 220, 255);
     font-family: 'Courier New', monospace;
-    color: green;
     margin: 0;
-    
     padding: 0;
+    height: 100%;
 }
 
 h1 {
     margin-top:0;
 }
-
-
 
 .menu {
     list-style-type: none;
@@ -41,7 +37,33 @@ a:hover {
 }  
 
 .content {
-    margin-left: 25%;
+    margin-left: 320px;
     width: 40%;
     padding: 0;
+    margin-top: 0;
+
+}
+
+canvas {
+    margin: 0;
+    width: 100%;
+    border:1px solid #000000;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+
 }
