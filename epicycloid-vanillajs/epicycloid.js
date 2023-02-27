@@ -2,6 +2,8 @@
 
 var canvas = document.getElementById('myCanvas');
 var ctx = canvas.getContext('2d');
+setInterval(draw,50);
+
 
 let R = 70; //scale
 let vars = {
@@ -76,7 +78,7 @@ getHex = function() {
 }
 
 function updateRandOne(v, vspd, mult) {
-  sign = math.random() > .5 ? -1 : 1
+  sign = Math.random() > .5 ? -1 : 1
   return v + ((Math.random()/2)+1) * sign * vspd * mult;
 }
 function updateRandAll() {
@@ -152,6 +154,7 @@ document.addEventListener('keydown', function(event) {
             break;
   }
 })
+
 var controlstext = [
     "Controls:",
     "Q,A: k, W,S: k2, E,D: p, R,F: h",
@@ -166,9 +169,9 @@ let sin = Math.sin;
 let scale = (x,y) => [x + canvas.width/2, y+ canvas.height/2];
 
 function draw() {
-    
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+  
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.translate(0.5, 0.5);
 
@@ -207,4 +210,3 @@ function draw() {
     }
     ctx.stroke()
 }
-setInterval(draw,50);
