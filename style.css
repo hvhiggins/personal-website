@@ -13,7 +13,7 @@ h1 {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 12%;
+    width: 13%;
     height: 100%;
     position: fixed;
     overflow: auto;
@@ -37,7 +37,7 @@ a:hover {
 }  
 
 .content {
-    margin-left: 13%;
+    margin-left: 14%;
     width: 40%;
     padding: 0;
     margin-top: 0;
