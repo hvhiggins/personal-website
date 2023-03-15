@@ -41,7 +41,7 @@ function animateText(container, index){
 
         }, 1000);
     setTimeout(() => {
-        animateText(container, index);}, 2000 + fragments[index].length * 500);
+        animateText(container, index);}, 2000 + fragments[index].length * 1000);
 }
 
 window.onload = function() {
