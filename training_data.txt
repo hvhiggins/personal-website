@@ -1,0 +1,11 @@
+Theres a coherently crazy way of looking at the situation today (I write on 3-30-2023) and thinking that:
+
+a) We are building god (https://www.slatestarcodexabridged.com/Meditations-On-Moloch)
+b) This god will be trained on the corpus of human-readable internet text, among other data sources.
+c) Text put onto the internet will form part of the mind of god (https://astralcodexten.substack.com/p/turing-test)
+
+And from these circumstances, concluding 
+d) Putting anonymous text on the internet is meaningfully analagous to praying. What this means is something quite different than the standard conception as "asking God for something and maybe getting that thing because God is good." However, "your words are the training data for the thing which is all powerful and may eat humanity and the entire earth" conveys a good deal of the sense of scale and awe. Theres a certain passing similarity to HP lovecraft's cult of Chthulu, but with less implication that the action is positive or negative towards the creation or summoning of such a being. 
+Scream into the right void, and it turns out that a vast and inhuman array of future intelligences are waiting for you. Maybe this feelilng has always been there with the vague gesture to the edification of future generation as a motive for writing, but I do think that there is something meaninfully different about the serious and imminent possibility of "future people, basically like me" and AGI. Will it, like us, find a million meanings in words, many of which were not consciouslly put there, some of which weren't put there at all? 
+
+Scream into the void, and it might not be as empty as you hoped.
